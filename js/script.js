@@ -102,16 +102,16 @@
 // - If the user writes in blue, return a log saying "Cool - oceans are blue."
 // - If the user writes in red, return a log saying "Cool - volcanoes are red."
 // - If the user writes anything else, return a log saying "Hmm that's not bad."
-
-let favColour = prompt("What's your fav colour?");
-
-if (favColour == "blue") {
-  console.log("Cool, blue is the colour of the sky");
-} else if (favColour == "red" || favColour == "maroon") {
-  console.log("Volcanoes are that colour!");
-} else {
-  console.log("That's not bad");
-}
+//
+// let favColour = prompt("What's your fav colour?");
+//
+// if (favColour == "blue") {
+//   console.log("Cool, blue is the colour of the sky");
+// } else if (favColour == "red" || favColour == "maroon") {
+//   console.log("Volcanoes are that colour!");
+// } else {
+//   console.log("That's not bad");
+// }
 
 // Create a prompt which asks for your movie review (out of 5 stars)
 // Once the user enters their number, display their choice with a console log.
@@ -120,20 +120,20 @@ if (favColour == "blue") {
 // If the user writes in 3, return a log saying "Average movie"
 // If the user writes in 4 or 5, return a log saying "It was a great movie"
 // If the user writes in a number greater then 5, return a log saying "You're too high - Try again"
-
-let review = prompt("Enter a review out of 5 stars");
-console.log(`Your review: ${review}/5`);
-if (review < 3 ) {
-  console.log(`Not a great movie`);
-}else if (review == 3) {
-  console.log(`Average movie`);
-}else if (review >= 4 && review < 6 ) {
-  console.log(`It was a great movie`);
-}else if (review > 5) {
-  console.log(`You're too high - Try again`);
-} else {
-  console.log(`You need to enter a number`);
-}
+//
+// let review = prompt("Enter a review out of 5 stars");
+// console.log(`Your review: ${review}/5`);
+// if (review < 3 ) {
+//   console.log(`Not a great movie`);
+// }else if (review == 3) {
+//   console.log(`Average movie`);
+// }else if (review >= 4 && review < 6 ) {
+//   console.log(`It was a great movie`);
+// }else if (review > 5) {
+//   console.log(`You're too high - Try again`);
+// } else {
+//   console.log(`You need to enter a number`);
+// }
 
 // Read the W3Schools article:
 // https://www.w3schools.com/jsref/jsref_random.asp
@@ -150,3 +150,137 @@ if (review < 3 ) {
 // Final step:
 // Console log the coin flip and your own guess.
 // E.g. "You guessed tails. The coin was heads. You lose."
+
+// let coin = Math.floor(Math.random() * 2);
+
+// in short:
+// let side;
+//
+// if (coin == 1){
+//   side = "heads";
+// }else{
+//   side = "tails";
+// }
+//
+// let guess = prompt(`Coin flipper game. Guess heads or tails!`);
+//
+// if (guess == side) {
+//   console.log(`You guessed ${guess}, it was correct!`);
+// } else {
+//   console.log(`Uh oh. You guessed ${guess}, the coin was ${side}!`);
+// }
+
+// Random numbers
+// math.random is always a number between 0 and 1
+// but it can't be 1
+
+// let randomNumber = Math.floor(Math.random() * 100);
+// console.log(randomNumber);
+
+// Activity:
+// Create a loop, which runs 100 times.
+// Console 100 random numbers between 0 - 100.
+
+// for (let i=0; i<100; i++){
+//   console.log(Math.floor(Math.random() * 20)+1);
+// }
+//
+// Task:
+// Create a guessing game which prompts you for a number.
+// You have to guess a number between 1 and 6.
+// If you guessed it right it says "nice one"
+// If you guessed lower it will say "you guessed lower"
+// Same goes for higher it will say "you're too high"
+//
+// Extra: if you guessed anything else (i.e. a word)
+// return a console log: "enter a number between 1-6"
+//q
+// Task 2:
+// After you've guessed, show the two numbers on the screen
+// using bootstrap icons.
+// I.e. you guessed: 6, the number was 4
+//
+// // answer
+// let result = document.getElementById("result");
+// let guess = prompt("Guess a number between 1 and 6");
+//
+// const number = Math.floor((Math.random() * 6) + 1);
+// result.innerHTML = `
+//   <p>Your guess:<i class="bi bi-dice-${guess}"></i></p>
+//   <p>The number:<i class="bi bi-dice-${number}"></i></p>
+// `
+// if (guess == number) {
+//   result.innerHTML += `<h2>You guessed it spot on!</h2>`;
+// }else if (guess < number) {
+//   result.innerHTML += `<h2>You guessed lower!</h2>`;
+// } else {
+//   result.innerHTML += `<h2>You guessed higher!</h2>`;
+// }
+
+// -----------------Parse ints------------------
+
+// let num1 = parseInt(prompt("enter a number"));
+// let num2 = parseInt(prompt("enter another number"));
+//
+// console.log(num1 + num2);
+
+// ----------------Function arguments----------------
+
+// function greeting(adjective, name){
+//   console.log(`Hello ${name}, you're ${adjective}`);
+// }
+// greeting("hungry", "tim");
+
+// number adder
+// function numberAdder(num1, num2){
+//   let result = num1 + num2;
+//   console.log(result);
+// }
+// numberAdder(5,9);
+
+// Practice: build a function which multiplies two numbers together.
+// Use a function argument.
+
+function numberMultiplier(number1, number2) {
+    let result = (number1 / number2) + 100;
+    console.log(result);
+}
+
+let num1 = 5;
+let num2 = 6;
+
+numberMultiplier(num1, num2);
+
+// Activity:
+// Build a function which divides two numbers and then adds 100.
+// Declare each number with variables.
+//
+// Activity:
+// Create a function which, using prompts, asks the user for a name and city.
+// Use a function argument to console log a message with your name and city.
+// E.g. Hi [Name], you live in [City].
+
+// let name = prompt("what's your name");
+// let city = prompt("whats your city");
+//
+// greeting(name, city);
+//
+// function greeting(name, city){
+//   console.log(`${name}, ${city}`);
+// }
+
+// -----------------CLOUD-----------------
+
+// (~OnO)~ YOU CAN DO IT! ~(OuO~)
+
+// Read the following article on function arguments:
+// https://www.w3schools.com/js/js_function_parameters.asp
+//
+// Create a function which, using prompts, asks the user for a product name, a product imageURL, and a price in $.
+// Use a function argument to display a product on the screen with the product name, product image (taken from the URL), and the price in $.
+// Also show the price on "special", which is a deal - which is the normal price divided by 2.
+//
+// E.g.
+// [Product image]
+// Tuna - Regular Price: $2.50.
+// Price on special! $1.25"
